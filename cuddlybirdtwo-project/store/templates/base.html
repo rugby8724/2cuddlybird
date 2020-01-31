@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,6 +9,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/60d6a2e14d.js" crossorigin="anonymous"></script>
     <!-- CSS -->
+    <link rel="stylesheet" href="{% static '/css/base.css' %}">
     <title>{% block title %}{% endblock %}</title>
   </head>
   {% include '_navbar.html' %}

@@ -9,7 +9,7 @@ User = get_user_model()
 
 class Category(models.Model):
     name = models.CharField(max_length=277, unique=True)
-    slug = models.SlugField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=277, unique=True)
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='category', blank=True)
 
@@ -22,13 +22,13 @@ class Category(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        self.slug = slug(self.name)
+        self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
 
 class Product(models.Model):
     name = models.CharField(max_length=277, unique=True)
-    slug = models.SlugField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=277, unique=True)
     description = models.TextField(blank=True)
     category = models.ForeignKey(Category, related_name='categories', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)

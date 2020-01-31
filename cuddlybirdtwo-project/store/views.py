@@ -9,5 +9,6 @@ class HomePage(generic.ListView):
     model = Product
     template_name = 'index.html'
 
-class SingleProduct(generic.DeleteView):
+class SingleProduct(generic.DetailView):
     model = Product
+    template_name = 'product_detail.html'
