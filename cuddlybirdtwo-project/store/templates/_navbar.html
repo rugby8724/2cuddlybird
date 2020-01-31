@@ -1,5 +1,8 @@
+{% load static %}
 <nav class='navbar navbar-expand-md navbar-light bg-dark'>
-  <a class="navbar-brand" href="{% url 'store:home' %}"><i class="fas fa-store text-warning fa-2x"></i></a>
+  <a class="navbar-brand w-30" href="{% url 'store:home' %}"><img class="img-fluid"
+    width="250em" height="220em"
+    src="{% static '/img/pink_logo.png' %}" alt="CuddlyBird"></a>
   <button class="navbar-toggler bg-light" type="button" name="button"
           data-toggle='collapse' data-target='#nav_menu'>
     <span class="navbar-toggler-icon"></span>

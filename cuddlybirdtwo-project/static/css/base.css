@@ -2,6 +2,29 @@ body {
   background: #f3f3f3;
 }
 
+video {
+    width: 40%;
+    height: 25%;
+}
+
+.card-top p{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 175%;
+  text-decoration: none;
+  color: black;
+}
+
+
+.card {
+  background-color: transparent;
+}
+
+.text-price{
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
+  font-size: 155%;
+}
+
 .product_title {
   font-size: 25px;
   text-transform: uppercase;
