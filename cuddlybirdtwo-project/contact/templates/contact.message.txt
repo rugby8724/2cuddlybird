@@ -1,0 +1,10 @@
+Contact Form Subject:
+
+{{subject}}
+
+Message:
+
+{{ message }}
+
+Reply to this email:
+{{ form_email }}

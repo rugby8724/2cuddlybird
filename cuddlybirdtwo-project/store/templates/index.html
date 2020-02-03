@@ -16,8 +16,13 @@
 
 <div class="container my-2 mx-auto">
 <div class="row">
+  <div class="col-6 float-lg-left">
+    <video src="{% static '/videos/cuddlevid.mp4' %}"
+         autoplay muted controls>
+    </video>
+  </div>
   {% for product in object_list %}
-  <div class="col-9 mx-auto col-md-6 col-lg-3">
+  <div class="col-3 float-lg-right">
     <a href="{{product.get_absolute_url}}">
     <div class="card mb-4" style="border-color: transparent;">
       <div class="card-top text-center">
@@ -38,11 +43,6 @@
 
   </div>
   {% endfor %}
-</div>
-<div class="text-center">
-  <video src="{% static '/videos/cuddlevid.mp4' %}"
-       autoplay muted controls>
-  </video>
 </div>
 </div>
 </body>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Message Sent{% endblock %}
+
+{% block content %}
+<body id="thanks" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="text-center min-vh-100  m-0 d-flex flex-column justify-content-center">
+                    <h1 class="display-4">Thanks, Cuddly Bird will receive your message soon!</h1>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-md" href="{% url 'store:home' %}" role="button">Cuddly Bird Home</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

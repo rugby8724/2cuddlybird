@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block title %}Contact Cuddly Bird{% endblock %}
+{% block content %}
+<body>
+  <div class="container">
+    <h1>Contact Cuddly Bird</h1>
+    <form class="contact_form" method="POST">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <div class="form-actions col text-center">
+        <input class="btn btn-success" type="submit" value="Submit">
+      </div>
+
+    </form>
+
+  </div>
+</body>
+{% endblock %}
