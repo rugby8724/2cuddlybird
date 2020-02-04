@@ -19,6 +19,10 @@ video {
   background-color: transparent;
 }
 
+.p-2 img {
+  object-fit: cover;
+}
+
 .text-price{
   font-family: 'Rajdhani', sans-serif;
   color: black;

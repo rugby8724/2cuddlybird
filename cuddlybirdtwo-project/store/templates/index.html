@@ -16,13 +16,8 @@
 
 <div class="container my-2 mx-auto">
 <div class="row">
-  <div class="col-6 float-lg-left">
-    <video src="{% static '/videos/cuddlevid.mp4' %}"
-         autoplay muted controls>
-    </video>
-  </div>
   {% for product in object_list %}
-  <div class="col-3 float-lg-right">
+  <div class="mx-auto col-sm-12 col-md-6 col-lg-3">
     <a href="{{product.get_absolute_url}}">
     <div class="card mb-4" style="border-color: transparent;">
       <div class="card-top text-center">
@@ -43,6 +38,18 @@
 
   </div>
   {% endfor %}
+</div>
+<div class="row">
+  <div class="mx-auto col-sm-12 col-md-6">
+    <video src="{% static '/videos/cuddlevid.mp4' %}"
+         autoplay muted controls>
+    </video>
+  </div>
+  <div class="col-6">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dPY6t1trVKc"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  </div>
 </div>
 </div>
 </body>
