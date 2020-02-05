@@ -12,3 +12,6 @@ class HomePage(generic.ListView):
 class SingleProduct(generic.DetailView):
     model = Product
     template_name = 'product_detail.html'
+
+class FeaturesPage(generic.TemplateView):
+    template_name ='features.html'
