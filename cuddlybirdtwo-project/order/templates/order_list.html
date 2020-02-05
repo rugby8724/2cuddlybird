@@ -26,7 +26,7 @@
         <td>{{ order.created|date:'d M Y' }}</td>
         <td>{{ order.total }}</td>
         <td><i class="fas fa-check"></i>&nbsp;Complete</td>
-        <td><a href="{% url 'store:order_detail' pk=order.id %}">View Order</a></td>
+        <td><a href="{% url 'order:order_detail' pk=order.id %}">View Order</a></td>
       </tr>
       {% endfor %}
     </tbody>

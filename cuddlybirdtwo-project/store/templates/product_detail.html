@@ -23,7 +23,7 @@
     {% if product.stock < 1  %}
     <p class="text-justify product_text">Out of Stock</p>
     {% else %}
-    <a href="#">
+    <a href="{% url 'cart:add_cart' product.id %}">
       <button type="button" name="button">Add to Cart</button>
     </a>
     {% endif %}
