@@ -15,12 +15,13 @@ def emailView(request):
             # name = form.cleaned_data['name']
             subject = form.cleaned_data['subject']
             form_email = form.cleaned_data['form_email']
+            bcc = [settings.DEFAULT_TO_EMAIL, settings.SECOND_TO_EMAIL]
             message = form.cleaned_data['message']
 
             # Email Test
             mail_sub = 'Cuddly Bird Message: ' + subject +"."
             from_email = settings.DEFAULT_FROM_EMAIL
-            to_email = ['jeremiah.d.wise@gmail.com','laluu.hu@gmail.com', 'cuddlybirdusa@gmail.com']
+            to_email = [settings.DEFAULT_FROM_EMAIL, settings.DEFAULT_TO_EMAIL, settings.SECOND_TO_EMAIL]
 
 
             contact_message = f'{subject},\n {message}\n\n from {form_email}'

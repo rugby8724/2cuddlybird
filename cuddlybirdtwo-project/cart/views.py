@@ -167,13 +167,14 @@ def sendEmail(order_id):
         #Sending the order to the customer
         mail_sub = f"Cuddly Bird - New Order #{transaction.id}"
         to_email = [f'{transaction.emailAddress}', settings.DEFAULT_FROM_EMAIL]
+        bcc = [settings.DEFAULT_TO_EMAIL, settings.SECOND_TO_EMAIL]
         from_email = settings.DEFAULT_FROM_EMAIL
         order_information = {
         'transaction': transaction,
         'order_items': order_items
         }
         order_message = get_template('email/email.html').render(order_information)
-        msg = EmailMessage(mail_sub, order_message, to=to_email, from_email=from_email)
+        msg = EmailMessage(mail_sub, order_message, to=to_email, from_email=from_email, bcc=bcc)
         msg.content_subtype = 'html'
         msg.send()
         # send_mail(mail_sub, order_message, from_email, to_email, fail_silently=True)
